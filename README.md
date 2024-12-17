@@ -2,7 +2,7 @@
 
 ---
 
-# Threads Clone Web App: MERN Masterclass
+# Threads Clone Web App
 
 Welcome to the **Threads Clone Web App**, built with the MERN stack. This project features real-time chat functionality powered by **Socket.io** and is designed with **Chakra UI** for a modern and responsive user interface.
 
