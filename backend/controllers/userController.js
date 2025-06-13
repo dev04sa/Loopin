@@ -72,18 +72,27 @@ const signupUser = async (req, res) => {
 const loginUser = async (req, res) => {
 	try {
 		const { username, password } = req.body;
+
+		// Find user in DB
 		const user = await User.findOne({ username });
+
+		// Validate password
 		const isPasswordCorrect = await bcrypt.compare(password, user?.password || "");
 
-		if (!user || !isPasswordCorrect) return res.status(400).json({ error: "Invalid username or password" });
+		if (!user || !isPasswordCorrect) {
+			return res.status(400).json({ error: "Invalid username or password" });
+		}
 
+		// Check if account is frozen
 		if (user.isFrozen) {
 			user.isFrozen = false;
 			await user.save();
 		}
 
+		// Generate token and set cookie
 		generateTokenAndSetCookie(user._id, res);
 
+		// Send user data as response
 		res.status(200).json({
 			_id: user._id,
 			name: user.name,
@@ -93,8 +102,8 @@ const loginUser = async (req, res) => {
 			profilePic: user.profilePic,
 		});
 	} catch (error) {
+		console.error("Error in loginUser: ", error.message);
 		res.status(500).json({ error: error.message });
-		console.log("Error in loginUser: ", error.message);
 	}
 };
 
