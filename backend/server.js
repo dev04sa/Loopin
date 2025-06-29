@@ -28,7 +28,8 @@ cloudinary.config({
 app.use(cors({
   origin: "*", // ✅ or your deployed frontend
   credentials: true,              // ✅ needed for cookies/session
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: '*',
 }));
 
 app.options("*", cors()); // ✅ handles preflight
