@@ -166,17 +166,19 @@ THREADS-CLONE/
 
 ## 🖼️ **Screenshots**
 
-### Home Feed
-![Home Feed](./assets/home.png)
 
-### Create Post
-![Create Post](./assets/create-post.png)
+![Screenshot 2025-06-13 135900](https://github.com/user-attachments/assets/42c63c79-759e-4fe1-bde8-7c349b99d095)
+![Screenshot 2025-06-13 135923](https://github.com/user-attachments/assets/8e8eb906-16f8-442d-b75c-f0c773b24d72)
+![Screenshot 2025-06-13 135932](https://github.com/user-attachments/assets/1d22e572-7f54-45b0-b098-40c35ea9771f)
+![Screenshot 2025-06-13 135945](https://github.com/user-attachments/assets/ee5477df-7417-4cd5-a2cc-0b6c42549439)
+![Screenshot 2025-06-13 140005](https://github.com/user-attachments/assets/2a4d6541-6356-4236-a020-9a7dd0ec03a6)
+![Screenshot 2025-06-13 140129](https://github.com/user-attachments/assets/3ee00fd6-7ac6-4a1d-a6a4-23e80983883a)
+![Screenshot 2025-06-13 134942](https://github.com/user-attachments/assets/7f83886e-2f64-496c-86a6-3a85b7941317)
+![Screenshot 2025-06-13 135738](https://github.com/user-attachments/assets/9d25876d-cd7e-4e9f-87dc-a9ebe79c540d)
+![Screenshot 2025-06-13 135759](https://github.com/user-attachments/assets/c71a061d-b2e4-44a4-a872-a32ec8265349)
+![Screenshot 2025-06-13 135816](https://github.com/user-attachments/assets/165a6477-c510-46a3-8a0a-7288738ad68a)
+![Screenshot 2025-06-13 135834](https://github.com/user-attachments/assets/84ac2da1-8f9f-47be-9f94-0e908392e8e2)
 
-### Chat Functionality
-![Chat](./assets/chat.png)
-
-### Responsive Design
-![Responsive Design](./assets/responsive.png)
 
 ---
 
