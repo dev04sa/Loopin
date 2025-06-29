@@ -26,9 +26,14 @@ cloudinary.config({
 });
 
 app.use(cors({
-	origin: "http://localhost:3000", // Allow frontend origin
-	credentials: true,               // Allow cookies/auth headers
+  origin: "http://localhost:3000", // ✅ or your deployed frontend
+  credentials: true,              // ✅ needed for cookies/session
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 }));
+
+app.options("*", cors()); // ✅ handles preflight
+
+
 
 // Middlewares
 app.use(express.json({ limit: "50mb" })); // To parse JSON data in the req.body
