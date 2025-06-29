@@ -5,6 +5,17 @@ import Message from "../models/messageModel.js";
 import Conversation from "../models/conversationModel.js";
 
 const app = express();
+
+const corsOptions = {
+  origin: "http://localhost:3000", // or your Vite frontend URL
+  credentials: true, // allow cookies/auth headers
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions)); // preflight support
+
 const server = http.createServer(app);
 const io = new Server(server, {
 	cors: {
