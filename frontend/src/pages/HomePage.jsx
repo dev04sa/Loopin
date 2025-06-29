@@ -92,7 +92,7 @@ const HomePage = () => {
         }
 
         // ✅ Send request with token in Authorization header
-        const res = await axios.get("/api/posts/feed", {
+        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/posts/feed`, {
           headers: {
             Authorization: `Bearer ${token}`, // Attach token
           },

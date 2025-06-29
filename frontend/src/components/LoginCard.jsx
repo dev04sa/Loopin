@@ -152,6 +152,7 @@ import useShowToast from "../hooks/useShowToast";
 import userAtom from "../atoms/userAtom";
 
 export default function LoginCard() {
+	console.log( "Devedrdddddddddddddddddddddddddddddddd"+ import.meta.env.VITE_BACKEND_URL);
 	const [showPassword, setShowPassword] = useState(false);
 	const setAuthScreen = useSetRecoilState(authScreenAtom);
 	const setUser = useSetRecoilState(userAtom);
@@ -168,7 +169,7 @@ export default function LoginCard() {
 	const handleLogin = async () => {
 		setLoading(true);
 		try {
-			const res = await fetch("http://localhost:5000/api/users/login", {
+			const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/users/login`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

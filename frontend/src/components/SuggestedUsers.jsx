@@ -104,7 +104,7 @@ const SuggestedUsers = () => {
 		const getSuggestedUsers = async () => {
 			setLoading(true); // Start loading before API call
 			try {
-				const res = await fetch("/api/users/suggested");
+				const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/users/suggested`);
 
 				// Check for a valid response
 				if (!res.ok) {
