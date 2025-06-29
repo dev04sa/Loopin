@@ -9,7 +9,7 @@ import messageRoutes from "./routes/messageRoutes.js";
 import { v2 as cloudinary } from "cloudinary";
 import { app, server } from "./socket/socket.js";
 import job from "./cron/cron.js";
-// import cors from "cors";
+ import cors from "cors";
 
 dotenv.config();
 
@@ -25,16 +25,15 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-// app.use(
-//   cors({
-//     origin: "*", // ✅ or your deployed frontend
-//     credentials: true, // ✅ needed for cookies/session
-//     methods: "*",
-//     allowedHeaders: "*",
-//   }),
-// );
+const corsOptions = {
+  origin: "http://localhost:3000", // or your Vite frontend URL
+  credentials: true, // allow cookies/auth headers
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
 
-// app.options("*", cors()); // ✅ handles preflight
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions)); // preflight support
 
 // Middlewares
 app.use(express.json({ limit: "50mb" })); // To parse JSON data in the req.body
