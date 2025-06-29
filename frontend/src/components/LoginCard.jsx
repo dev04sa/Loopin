@@ -152,7 +152,6 @@ import useShowToast from "../hooks/useShowToast";
 import userAtom from "../atoms/userAtom";
 
 export default function LoginCard() {
-	console.log( "Devedrdddddddddddddddddddddddddddddddd"+ import.meta.env.VITE_BACKEND_URL);
 	const [showPassword, setShowPassword] = useState(false);
 	const setAuthScreen = useSetRecoilState(authScreenAtom);
 	const setUser = useSetRecoilState(userAtom);
