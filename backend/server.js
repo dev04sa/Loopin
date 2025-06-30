@@ -11,7 +11,7 @@ import { app, server } from "./socket/socket.js";
 import job from "./cron/cron.js";
 import cors from "cors";
 const corsOptions = {
-  origin: "http://localhost:3000", // or your Vite frontend URL
+  origin: "https://loopin-topaz.vercel.app", // or your Vite frontend URL
   credentials: true, // allow cookies/auth headers
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
