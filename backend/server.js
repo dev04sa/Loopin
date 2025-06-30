@@ -21,6 +21,8 @@ app.use(cors(corsOptions));
 app.options("*", cors(corsOptions)); // preflight support
 
 
+
+
 dotenv.config();
 
 connectDB();
@@ -44,6 +46,13 @@ cloudinary.config({
 app.use(express.json({ limit: "50mb" })); // To parse JSON data in the req.body
 app.use(express.urlencoded({ extended: true })); // To parse form data in the req.body
 app.use(cookieParser());
+
+
+
+app.get("/test-cors", (req, res) => {
+  res.json({ message: "CORS seems okay!" });
+});
+
 
 // Routes
 app.use("/api/users", userRoutes);
